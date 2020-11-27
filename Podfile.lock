@@ -1,0 +1,24 @@
+PODS:
+  - FreeStreamer (4.0.0):
+    - Reachability (~> 3.0)
+  - LookinServer (1.0.0)
+  - Reachability (3.2)
+
+DEPENDENCIES:
+  - FreeStreamer
+  - LookinServer
+
+SPEC REPOS:
+  trunk:
+    - FreeStreamer
+    - LookinServer
+    - Reachability
+
+SPEC CHECKSUMS:
+  FreeStreamer: 7e9c976045701ac2f7e9c14c17245203c37bf2ea
+  LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+
+PODFILE CHECKSUM: 2b409c198c8af39e1c255419ef8bf98986934c00
+
+COCOAPODS: 1.10.0.rc.1

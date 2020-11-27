@@ -1,0 +1,1442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		638FEAAFC575BB76BC6AC055CDDA3506 /* LookinServer */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 74EE83670ABC31CDD77B49DA732104E8 /* Build configuration list for PBXAggregateTarget "LookinServer" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = LookinServer;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		02B8C51002A2B221CCA800B4FD9749B5 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EA3DAB7E8C805C677E73CAA8E0B4B07 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02BE0DE3E401173870399A675DFD6649 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D62D00EC70CF9F35F4A1CD33A4A840 /* AVFoundation.framework */; };
+		03630BB1C36457E7FCE4CAFB4165118B /* file_output.h in Headers */ = {isa = PBXBuildFile; fileRef = A02F31D2E18D0A78BE3BC78F0C96CB1B /* file_output.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0D35B2DD6DBB401773C8B8BBA32F1F06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF130989A30CFB1BC38320E3EE04EB20 /* AudioToolbox.framework */; };
+		14EA919D60E963360F1CD5D360AB0469 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA4BD57FB4F120C4F20134B0433F9BD /* MediaPlayer.framework */; };
+		15E52571D7A8615154FDE794C289AA6A /* Reachability-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E5587C022B3DBBF784106ADFBF372E0 /* Reachability-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		176424F3792D38B3A4CD5626DFA9DDA4 /* FSCheckContentTypeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7292210DA5D07F4DC6278A4BA92B33A4 /* FSCheckContentTypeRequest.m */; };
+		1A09136EE31484CED2B9C93FFF9ABBBF /* FreeStreamer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13063CBB0CD6DAD74D2A45B89C074260 /* FreeStreamer-dummy.m */; };
+		1EFF69AD3F4B3FCE40EE39DD2982C7BA /* caching_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FF0470EBA0E07C55E29BC844DAABD97 /* caching_stream.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		24C0D31709AE53D880168DE1712709FD /* input_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD387F2D4379BA45444DC0022E972D /* input_stream.cpp */; };
+		288BC105165053D74066ECEB1A794866 /* FSPlaylistItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C059D66283572AAC3C03A0EB47A5F155 /* FSPlaylistItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32B681A2AA0BA93268FC55CB4915B7C3 /* Pods-AudioPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 187762419415E726D91A9131E4B70838 /* Pods-AudioPlayer-dummy.m */; };
+		344FF47F336F81691D6E8C12334C5677 /* Pods-AudioPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B397647682AF4251BE6F1E11B68F5E3 /* Pods-AudioPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40F871228B974D0CA5AF74547CB42671 /* http_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 127A218B3F687E64FB15379C891A822F /* http_stream.cpp */; };
+		4449247D14426BF1FC9C42C495410799 /* file_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE82ECA80A6525C475B98CD269DFCF3 /* file_stream.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		45A047B658F60195163C2959510EADF3 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91FCA191BB0A8F082D519FB1ED39C277 /* Reachability.framework */; };
+		486B5F27A04C6FB63FB154D20DACE2BA /* file_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4859B304E6362BC6AB1670E5DAE8688 /* file_stream.cpp */; };
+		491C93A373A4F5B244D7FFA2EF094E64 /* FSParseRssPodcastFeedRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B71FE20366834CDF61AF803CB7614EE3 /* FSParseRssPodcastFeedRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BF5B27D774DA85D3F8677F29D890D98 /* FSPlaylistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C8D1FBF3CB7DE3523912065712B835 /* FSPlaylistItem.m */; };
+		52BCAC7ABBAF6C645BA4240BD5269451 /* Pods-AudioPlayer-AudioPlayerUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A165515202C149F434AF402A3C130E8A /* Pods-AudioPlayer-AudioPlayerUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55D85AAFE02A90B17D6CF9F2C586E56E /* FSAudioController.h in Headers */ = {isa = PBXBuildFile; fileRef = B033999BFA86FA2E6D241B985AECBC2B /* FSAudioController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		564FD0E8AAF2E0F3A721E2B3B63030EC /* FSAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75259F5DA405B24E6DEC0BF67821CFB0 /* FSAudioController.m */; };
+		5C3E1966B9C02660449645C1452F4762 /* FSParsePlaylistRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 844574B3A42931BFA0E9E60AB49F22AA /* FSParsePlaylistRequest.m */; };
+		5F357D1332E81A12780729C726ED8A93 /* audio_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDF631D135F5A5077B7198AFF94D6E09 /* audio_stream.cpp */; };
+		670B585D71494142EF8FDA9B90363861 /* FreeStreamer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14C58F70348A41782A94F887C7A356B0 /* FreeStreamer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		717F169056AA8DC57D3E8913EF71E9DE /* audio_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = A73A51BF2A4C1E9FF5705F783CDCBB07 /* audio_queue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7199C5FEFFD68DD888AA588041309752 /* Pods-AudioPlayer-AudioPlayerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C410D44B7408F1362A1141E387CE9 /* Pods-AudioPlayer-AudioPlayerUITests-dummy.m */; };
+		71D2746DD86A1B08301006ED8D9A35E3 /* FSParsePlaylistRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C1146924A3C5F7DFCD07E46D94A00792 /* FSParsePlaylistRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73F0050FC36B85C7418C08DAF768B4B5 /* Reachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 529065240B63B46A5D3C3AC4760E06A8 /* Reachability-dummy.m */; };
+		7E383940F89832BD638EEA1DC9AAF6F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAF7DC8892A1731D79637E8584DB15B /* Foundation.framework */; };
+		7F9790C05724E6F757922CA82D51B650 /* stream_configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D401702F7798D9848008CEA4A67417A /* stream_configuration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8082BFA5D8972D79BA905E8DD7187D4C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C875FEBC53CDC914627CBD5B3328E8 /* SystemConfiguration.framework */; };
+		8A3B9A657061022C62DCFBF9E79D0F2B /* audio_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2801CE6E0D0B72D3E60DDDBCA681041B /* audio_queue.cpp */; };
+		8BB453D3968F443C383911C02DFE0F3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAF7DC8892A1731D79637E8584DB15B /* Foundation.framework */; };
+		9858AB4BDAD5C8B539C7E6DF1DE4F0F9 /* file_output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F86886486FCFB22B4F8DC03BE09517 /* file_output.cpp */; };
+		9BDA0AF54420A8711C3AF1E705807108 /* Pods-AudioPlayerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD0C49EEE1100C487552FA5FD0D94AD5 /* Pods-AudioPlayerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A44E841D60BD3F5E08AB594A4C131608 /* input_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E262F5F6BEEA025751BEE2BAE9A2F7 /* input_stream.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A5A41F089833F41CB32913504A8878E1 /* id3_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = A42B6814E591DE6349CE060743DB261B /* id3_parser.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A6AF1F0C2335DAACDEA4D6841E747D98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAF7DC8892A1731D79637E8584DB15B /* Foundation.framework */; };
+		A6DB28566A4032559E72F9B23A8F86C0 /* id3_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CC42EB41EFC5D4A86372B5E392A35E6 /* id3_parser.cpp */; };
+		A7639820B6D7961F51E6EB6557D36C55 /* FSParseRssPodcastFeedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD0BCCCF99ECE5B374F1C95B3A98B5E /* FSParseRssPodcastFeedRequest.m */; };
+		ABBF9483CD41DB923EA693A7DC032075 /* FSXMLHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F56BA74C472E4FE6F877D26FDAD58823 /* FSXMLHttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3FA1860DC25A5617C5775B3C4EB8E9C /* FSAudioStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = 115EA32768C7407473FB5EADC6C745FE /* FSAudioStream.mm */; };
+		C549EE72CA875EC70E88BA5565CD71E7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFF2E754BCB3D8F63B698748A393DEE /* Reachability.m */; };
+		C61C10BD0F1470B42C01DBA8C8A01699 /* FSXMLHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BACFAAA57FF6DE73F0DC63AB9FBAF74F /* FSXMLHttpRequest.m */; };
+		D31C116ACDB8ACE5FC9A7490B632C271 /* Pods-AudioPlayerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77595545C3530BFF9CD7F1DDF1256BCB /* Pods-AudioPlayerTests-dummy.m */; };
+		D73A2FC43CEB5B1416F43D9DD190045D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B6C000AFDDDC4080A6CC2F6F8EC1DE /* CFNetwork.framework */; };
+		DA610A98C19A70A501BA16C0C913CEBF /* caching_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20D9FB45846D66A9564E53E5A4B77E9F /* caching_stream.cpp */; };
+		DC34A83DDAFFE9C3524261BA169B57CE /* audio_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C530956323A901A594DC309D1D6C243 /* audio_stream.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E004012D190D7A95C656815740E2585F /* stream_configuration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D9841DC0634A3E788476A0D64BCF6E8 /* stream_configuration.cpp */; };
+		E52FC34F29432BFE2089EBDE79C91711 /* http_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 82E54FA471D55B0FD721D39219A49435 /* http_stream.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EBE72BDADD2F46938D3A5D91079D5DEA /* FSAudioStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CED007445B61483D80E07E92B6D9D06 /* FSAudioStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65C8C8E42FDCE305D7D7828FE1C2E53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAF7DC8892A1731D79637E8584DB15B /* Foundation.framework */; };
+		FBA12BCBB06A13486A8E2A02858A92B5 /* FSCheckContentTypeRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998B56B9D106D84AFF7DC3C4C975A29 /* FSCheckContentTypeRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF39ED164F635EFD97F297C451852147 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAF7DC8892A1731D79637E8584DB15B /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		115CF69EE9CBD326959138985B5B24F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAA047C0F5E4106F3904E8497FA17F97;
+			remoteInfo = Reachability;
+		};
+		238C5D5B852CC5553FB5FEE43F501B55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAA047C0F5E4106F3904E8497FA17F97;
+			remoteInfo = Reachability;
+		};
+		436CE9E67C9DA16918F27B7B72765768 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAA047C0F5E4106F3904E8497FA17F97;
+			remoteInfo = Reachability;
+		};
+		640F2E3C6EFDECDA6A4B823776B30332 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 638FEAAFC575BB76BC6AC055CDDA3506;
+			remoteInfo = LookinServer;
+		};
+		845C7F68952AE241C0C5273B8A8A1651 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 638FEAAFC575BB76BC6AC055CDDA3506;
+			remoteInfo = LookinServer;
+		};
+		9E8237A47BEA01F43974985C48A5EEEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70DC5DA42DBE559A810B3417F948E574;
+			remoteInfo = "Pods-AudioPlayer";
+		};
+		BEFE95855CE1A7F054AF45C71B4A7F8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3AAC0817EA4DC8BD9C0046F50078BF9;
+			remoteInfo = FreeStreamer;
+		};
+		E521F1B36F71108AC2B931133415FBEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3AAC0817EA4DC8BD9C0046F50078BF9;
+			remoteInfo = FreeStreamer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07F86886486FCFB22B4F8DC03BE09517 /* file_output.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = file_output.cpp; path = FreeStreamer/FreeStreamer/file_output.cpp; sourceTree = "<group>"; };
+		086CB2F878A75EB42ECC193A4F526D41 /* FreeStreamer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FreeStreamer.debug.xcconfig; sourceTree = "<group>"; };
+		0998B56B9D106D84AFF7DC3C4C975A29 /* FSCheckContentTypeRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCheckContentTypeRequest.h; path = FreeStreamer/FreeStreamer/FSCheckContentTypeRequest.h; sourceTree = "<group>"; };
+		0C2448148CCCF4862CA4B39F77005677 /* FreeStreamer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FreeStreamer.release.xcconfig; sourceTree = "<group>"; };
+		0E229DCD7FE371966A2CFF19CB3EDD89 /* Pods-AudioPlayer-AudioPlayerUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioPlayer-AudioPlayerUITests-Info.plist"; sourceTree = "<group>"; };
+		115EA32768C7407473FB5EADC6C745FE /* FSAudioStream.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FSAudioStream.mm; path = FreeStreamer/FreeStreamer/FSAudioStream.mm; sourceTree = "<group>"; };
+		127A218B3F687E64FB15379C891A822F /* http_stream.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = http_stream.cpp; path = FreeStreamer/FreeStreamer/http_stream.cpp; sourceTree = "<group>"; };
+		12B8E95AD0D743FB969DDA12C786A550 /* Pods-AudioPlayer-AudioPlayerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AudioPlayer-AudioPlayerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		13063CBB0CD6DAD74D2A45B89C074260 /* FreeStreamer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FreeStreamer-dummy.m"; sourceTree = "<group>"; };
+		148C5562F67D64BDDF86D3B92B737F97 /* Pods-AudioPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		14C58F70348A41782A94F887C7A356B0 /* FreeStreamer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FreeStreamer-umbrella.h"; sourceTree = "<group>"; };
+		187762419415E726D91A9131E4B70838 /* Pods-AudioPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AudioPlayer-dummy.m"; sourceTree = "<group>"; };
+		1908281A3AA7C1161C46F4EC26A9956B /* Pods-AudioPlayer-AudioPlayerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudioPlayer-AudioPlayerUITests-frameworks.sh"; sourceTree = "<group>"; };
+		1AC92983C0238D0816D6E58663DE9F1E /* Pods_AudioPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AudioPlayer.framework; path = "Pods-AudioPlayer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CED007445B61483D80E07E92B6D9D06 /* FSAudioStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAudioStream.h; path = FreeStreamer/FreeStreamer/FSAudioStream.h; sourceTree = "<group>"; };
+		1DE82ECA80A6525C475B98CD269DFCF3 /* file_stream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = file_stream.h; path = FreeStreamer/FreeStreamer/file_stream.h; sourceTree = "<group>"; };
+		1E7ED1B3F5422CBA250709AFFEC21E79 /* Pods-AudioPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1EFF2E754BCB3D8F63B698748A393DEE /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1FFAB1D56C43673F671A1F9F68D5BE56 /* Reachability.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Reachability.release.xcconfig; sourceTree = "<group>"; };
+		20D9FB45846D66A9564E53E5A4B77E9F /* caching_stream.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = caching_stream.cpp; path = FreeStreamer/FreeStreamer/caching_stream.cpp; sourceTree = "<group>"; };
+		217D5B541AE36D4AB5E20FD0F9939F4C /* Reachability.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Reachability.debug.xcconfig; sourceTree = "<group>"; };
+		27C875FEBC53CDC914627CBD5B3328E8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		2801CE6E0D0B72D3E60DDDBCA681041B /* audio_queue.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = audio_queue.cpp; path = FreeStreamer/FreeStreamer/audio_queue.cpp; sourceTree = "<group>"; };
+		2EA3DAB7E8C805C677E73CAA8E0B4B07 /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		3395F4E56CC0DE539217C468978BB5CA /* Pods-AudioPlayer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudioPlayer-frameworks.sh"; sourceTree = "<group>"; };
+		359F20447DD6B2DABE3B77D75DA92F82 /* FreeStreamer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FreeStreamer.framework; path = FreeStreamer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE1345DB6F59474B187FB5284EDB7FD /* Pods-AudioPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AudioPlayer.modulemap"; sourceTree = "<group>"; };
+		3C530956323A901A594DC309D1D6C243 /* audio_stream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = audio_stream.h; path = FreeStreamer/FreeStreamer/audio_stream.h; sourceTree = "<group>"; };
+		3CC42EB41EFC5D4A86372B5E392A35E6 /* id3_parser.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = id3_parser.cpp; path = FreeStreamer/FreeStreamer/id3_parser.cpp; sourceTree = "<group>"; };
+		3CDD387F2D4379BA45444DC0022E972D /* input_stream.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = input_stream.cpp; path = FreeStreamer/FreeStreamer/input_stream.cpp; sourceTree = "<group>"; };
+		3D9841DC0634A3E788476A0D64BCF6E8 /* stream_configuration.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = stream_configuration.cpp; path = FreeStreamer/FreeStreamer/stream_configuration.cpp; sourceTree = "<group>"; };
+		3E5587C022B3DBBF784106ADFBF372E0 /* Reachability-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reachability-umbrella.h"; sourceTree = "<group>"; };
+		400FF55D0451E7A8F33A3D0D3E11C1B9 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Reachability.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B6C000AFDDDC4080A6CC2F6F8EC1DE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		480A56EB8D6D41645AFEC9F17141CF32 /* FreeStreamer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FreeStreamer-Info.plist"; sourceTree = "<group>"; };
+		528946AC2076D84AC33D24473184F98E /* Pods-AudioPlayer-AudioPlayerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioPlayer-AudioPlayerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		529065240B63B46A5D3C3AC4760E06A8 /* Reachability-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Reachability-dummy.m"; sourceTree = "<group>"; };
+		55C8D1FBF3CB7DE3523912065712B835 /* FSPlaylistItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSPlaylistItem.m; path = FreeStreamer/FreeStreamer/FSPlaylistItem.m; sourceTree = "<group>"; };
+		56600C003A1B2F5BB3339182FA78CA30 /* Pods_AudioPlayer_AudioPlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AudioPlayer_AudioPlayerUITests.framework; path = "Pods-AudioPlayer-AudioPlayerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		571CE05855A07A74E79C4F6ADDF9C20A /* FreeStreamer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FreeStreamer.modulemap; sourceTree = "<group>"; };
+		59009543F0913ED1760EFAB9B6AA6857 /* LookinServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LookinServer.release.xcconfig; sourceTree = "<group>"; };
+		6309240E183499AFF3E153C73CD743FD /* Pods-AudioPlayer-AudioPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioPlayer-AudioPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		64521244687BA7EEEA9C171F67187369 /* Pods-AudioPlayer-AudioPlayerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AudioPlayer-AudioPlayerUITests.modulemap"; sourceTree = "<group>"; };
+		6DAF7DC8892A1731D79637E8584DB15B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6FBE34CB272D343F1CEA5DE5E3860B2E /* Pods-AudioPlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioPlayer-Info.plist"; sourceTree = "<group>"; };
+		6FD0BCCCF99ECE5B374F1C95B3A98B5E /* FSParseRssPodcastFeedRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSParseRssPodcastFeedRequest.m; path = FreeStreamer/FreeStreamer/FSParseRssPodcastFeedRequest.m; sourceTree = "<group>"; };
+		72069F9BBF6DE4A956E6BD7C9F37258F /* LookinServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LookinServer.framework; sourceTree = "<group>"; };
+		7292210DA5D07F4DC6278A4BA92B33A4 /* FSCheckContentTypeRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCheckContentTypeRequest.m; path = FreeStreamer/FreeStreamer/FSCheckContentTypeRequest.m; sourceTree = "<group>"; };
+		75259F5DA405B24E6DEC0BF67821CFB0 /* FSAudioController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSAudioController.m; path = FreeStreamer/FreeStreamer/FSAudioController.m; sourceTree = "<group>"; };
+		77595545C3530BFF9CD7F1DDF1256BCB /* Pods-AudioPlayerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AudioPlayerTests-dummy.m"; sourceTree = "<group>"; };
+		7B397647682AF4251BE6F1E11B68F5E3 /* Pods-AudioPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AudioPlayer-umbrella.h"; sourceTree = "<group>"; };
+		7F2FC3C5B342DB6083608064361B6D9F /* Reachability-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reachability-prefix.pch"; sourceTree = "<group>"; };
+		82E54FA471D55B0FD721D39219A49435 /* http_stream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = http_stream.h; path = FreeStreamer/FreeStreamer/http_stream.h; sourceTree = "<group>"; };
+		844574B3A42931BFA0E9E60AB49F22AA /* FSParsePlaylistRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSParsePlaylistRequest.m; path = FreeStreamer/FreeStreamer/FSParsePlaylistRequest.m; sourceTree = "<group>"; };
+		8AE5CBF9CCE09D9190BA484FD0422FAC /* Pods-AudioPlayer-AudioPlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioPlayer-AudioPlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8D401702F7798D9848008CEA4A67417A /* stream_configuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stream_configuration.h; path = FreeStreamer/FreeStreamer/stream_configuration.h; sourceTree = "<group>"; };
+		8FF0470EBA0E07C55E29BC844DAABD97 /* caching_stream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = caching_stream.h; path = FreeStreamer/FreeStreamer/caching_stream.h; sourceTree = "<group>"; };
+		91FCA191BB0A8F082D519FB1ED39C277 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99675B1D131B2ECFED268D9251AACD3E /* Pods-AudioPlayer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioPlayer-acknowledgements.plist"; sourceTree = "<group>"; };
+		99977FB35759C9D2147374443CCAFDA7 /* Pods-AudioPlayerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AudioPlayerTests.modulemap"; sourceTree = "<group>"; };
+		999D817F0C5929DB7D6B8AADBB9080AC /* FreeStreamer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FreeStreamer-prefix.pch"; sourceTree = "<group>"; };
+		9BA4BD57FB4F120C4F20134B0433F9BD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E53EA667123864F3004DC0FF0241C5B /* Pods-AudioPlayerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AudioPlayerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A02F31D2E18D0A78BE3BC78F0C96CB1B /* file_output.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = file_output.h; path = FreeStreamer/FreeStreamer/file_output.h; sourceTree = "<group>"; };
+		A165515202C149F434AF402A3C130E8A /* Pods-AudioPlayer-AudioPlayerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AudioPlayer-AudioPlayerUITests-umbrella.h"; sourceTree = "<group>"; };
+		A42B6814E591DE6349CE060743DB261B /* id3_parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = id3_parser.h; path = FreeStreamer/FreeStreamer/id3_parser.h; sourceTree = "<group>"; };
+		A6AF169E3025CB4DFDBDB1101C63FC76 /* Reachability-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Reachability-Info.plist"; sourceTree = "<group>"; };
+		A73A51BF2A4C1E9FF5705F783CDCBB07 /* audio_queue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = audio_queue.h; path = FreeStreamer/FreeStreamer/audio_queue.h; sourceTree = "<group>"; };
+		A8D62D00EC70CF9F35F4A1CD33A4A840 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		B033999BFA86FA2E6D241B985AECBC2B /* FSAudioController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSAudioController.h; path = FreeStreamer/FreeStreamer/FSAudioController.h; sourceTree = "<group>"; };
+		B71FE20366834CDF61AF803CB7614EE3 /* FSParseRssPodcastFeedRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSParseRssPodcastFeedRequest.h; path = FreeStreamer/FreeStreamer/FSParseRssPodcastFeedRequest.h; sourceTree = "<group>"; };
+		BACFAAA57FF6DE73F0DC63AB9FBAF74F /* FSXMLHttpRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSXMLHttpRequest.m; path = FreeStreamer/FreeStreamer/FSXMLHttpRequest.m; sourceTree = "<group>"; };
+		BD0C49EEE1100C487552FA5FD0D94AD5 /* Pods-AudioPlayerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AudioPlayerTests-umbrella.h"; sourceTree = "<group>"; };
+		BDF631D135F5A5077B7198AFF94D6E09 /* audio_stream.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = audio_stream.cpp; path = FreeStreamer/FreeStreamer/audio_stream.cpp; sourceTree = "<group>"; };
+		BF130989A30CFB1BC38320E3EE04EB20 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		C059D66283572AAC3C03A0EB47A5F155 /* FSPlaylistItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSPlaylistItem.h; path = FreeStreamer/FreeStreamer/FSPlaylistItem.h; sourceTree = "<group>"; };
+		C1146924A3C5F7DFCD07E46D94A00792 /* FSParsePlaylistRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSParsePlaylistRequest.h; path = FreeStreamer/FreeStreamer/FSParsePlaylistRequest.h; sourceTree = "<group>"; };
+		C1BC4F23BBBDD0FCD086EC97E221109C /* LookinServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LookinServer.debug.xcconfig; sourceTree = "<group>"; };
+		C4859B304E6362BC6AB1670E5DAE8688 /* file_stream.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = file_stream.cpp; path = FreeStreamer/FreeStreamer/file_stream.cpp; sourceTree = "<group>"; };
+		C5BF658F0EDF01C63B93264C8195D466 /* Pods-AudioPlayerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioPlayerTests-Info.plist"; sourceTree = "<group>"; };
+		C6872AA0EA817926540C5E57CD250DE2 /* Pods-AudioPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD1A2787E67121D3CA627AD51B08BFB8 /* Pods_AudioPlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AudioPlayerTests.framework; path = "Pods-AudioPlayerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF7309711E54D8462D99A6DA03DC934 /* Pods-AudioPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudioPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		E3E9CB4622B3FBD76379199255694B0B /* Pods-AudioPlayerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudioPlayerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E5AEBFEE806DD7A7A2726FC4EF651A5C /* Pods-AudioPlayer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AudioPlayer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EA412FFC1703E17D295697609D1E2B6D /* Reachability.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Reachability.modulemap; sourceTree = "<group>"; };
+		F00C410D44B7408F1362A1141E387CE9 /* Pods-AudioPlayer-AudioPlayerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AudioPlayer-AudioPlayerUITests-dummy.m"; sourceTree = "<group>"; };
+		F56BA74C472E4FE6F877D26FDAD58823 /* FSXMLHttpRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSXMLHttpRequest.h; path = FreeStreamer/FreeStreamer/FSXMLHttpRequest.h; sourceTree = "<group>"; };
+		F9E262F5F6BEEA025751BEE2BAE9A2F7 /* input_stream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = input_stream.h; path = FreeStreamer/FreeStreamer/input_stream.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0BE897FF2F4ED16C8DDA76E82D741AC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB453D3968F443C383911C02DFE0F3D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		339C4C2141A90766A490CD425C83B80E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D35B2DD6DBB401773C8B8BBA32F1F06 /* AudioToolbox.framework in Frameworks */,
+				02BE0DE3E401173870399A675DFD6649 /* AVFoundation.framework in Frameworks */,
+				D73A2FC43CEB5B1416F43D9DD190045D /* CFNetwork.framework in Frameworks */,
+				A6AF1F0C2335DAACDEA4D6841E747D98 /* Foundation.framework in Frameworks */,
+				14EA919D60E963360F1CD5D360AB0469 /* MediaPlayer.framework in Frameworks */,
+				45A047B658F60195163C2959510EADF3 /* Reachability.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39888119535EDCC64FE45E1360F7CB95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF39ED164F635EFD97F297C451852147 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46B24D5A756AF17F03675DF77FA8260C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E383940F89832BD638EEA1DC9AAF6F2 /* Foundation.framework in Frameworks */,
+				8082BFA5D8972D79BA905E8DD7187D4C /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E3B14ECB6F3A60F7AA83F0E18F8431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65C8C8E42FDCE305D7D7828FE1C2E53 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0780D5FCD287BFCD55459CB1E33F1958 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BF130989A30CFB1BC38320E3EE04EB20 /* AudioToolbox.framework */,
+				A8D62D00EC70CF9F35F4A1CD33A4A840 /* AVFoundation.framework */,
+				42B6C000AFDDDC4080A6CC2F6F8EC1DE /* CFNetwork.framework */,
+				6DAF7DC8892A1731D79637E8584DB15B /* Foundation.framework */,
+				9BA4BD57FB4F120C4F20134B0433F9BD /* MediaPlayer.framework */,
+				27C875FEBC53CDC914627CBD5B3328E8 /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1327BB8DCD3AE19641B4D93706230D1C /* Pods-AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3BE1345DB6F59474B187FB5284EDB7FD /* Pods-AudioPlayer.modulemap */,
+				E5AEBFEE806DD7A7A2726FC4EF651A5C /* Pods-AudioPlayer-acknowledgements.markdown */,
+				99675B1D131B2ECFED268D9251AACD3E /* Pods-AudioPlayer-acknowledgements.plist */,
+				187762419415E726D91A9131E4B70838 /* Pods-AudioPlayer-dummy.m */,
+				3395F4E56CC0DE539217C468978BB5CA /* Pods-AudioPlayer-frameworks.sh */,
+				6FBE34CB272D343F1CEA5DE5E3860B2E /* Pods-AudioPlayer-Info.plist */,
+				7B397647682AF4251BE6F1E11B68F5E3 /* Pods-AudioPlayer-umbrella.h */,
+				DCF7309711E54D8462D99A6DA03DC934 /* Pods-AudioPlayer.debug.xcconfig */,
+				148C5562F67D64BDDF86D3B92B737F97 /* Pods-AudioPlayer.release.xcconfig */,
+			);
+			name = "Pods-AudioPlayer";
+			path = "Target Support Files/Pods-AudioPlayer";
+			sourceTree = "<group>";
+		};
+		4289D333DBBABA88E8BB168961788FDB /* FreeStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				2801CE6E0D0B72D3E60DDDBCA681041B /* audio_queue.cpp */,
+				A73A51BF2A4C1E9FF5705F783CDCBB07 /* audio_queue.h */,
+				BDF631D135F5A5077B7198AFF94D6E09 /* audio_stream.cpp */,
+				3C530956323A901A594DC309D1D6C243 /* audio_stream.h */,
+				20D9FB45846D66A9564E53E5A4B77E9F /* caching_stream.cpp */,
+				8FF0470EBA0E07C55E29BC844DAABD97 /* caching_stream.h */,
+				07F86886486FCFB22B4F8DC03BE09517 /* file_output.cpp */,
+				A02F31D2E18D0A78BE3BC78F0C96CB1B /* file_output.h */,
+				C4859B304E6362BC6AB1670E5DAE8688 /* file_stream.cpp */,
+				1DE82ECA80A6525C475B98CD269DFCF3 /* file_stream.h */,
+				B033999BFA86FA2E6D241B985AECBC2B /* FSAudioController.h */,
+				75259F5DA405B24E6DEC0BF67821CFB0 /* FSAudioController.m */,
+				1CED007445B61483D80E07E92B6D9D06 /* FSAudioStream.h */,
+				115EA32768C7407473FB5EADC6C745FE /* FSAudioStream.mm */,
+				0998B56B9D106D84AFF7DC3C4C975A29 /* FSCheckContentTypeRequest.h */,
+				7292210DA5D07F4DC6278A4BA92B33A4 /* FSCheckContentTypeRequest.m */,
+				C1146924A3C5F7DFCD07E46D94A00792 /* FSParsePlaylistRequest.h */,
+				844574B3A42931BFA0E9E60AB49F22AA /* FSParsePlaylistRequest.m */,
+				B71FE20366834CDF61AF803CB7614EE3 /* FSParseRssPodcastFeedRequest.h */,
+				6FD0BCCCF99ECE5B374F1C95B3A98B5E /* FSParseRssPodcastFeedRequest.m */,
+				C059D66283572AAC3C03A0EB47A5F155 /* FSPlaylistItem.h */,
+				55C8D1FBF3CB7DE3523912065712B835 /* FSPlaylistItem.m */,
+				F56BA74C472E4FE6F877D26FDAD58823 /* FSXMLHttpRequest.h */,
+				BACFAAA57FF6DE73F0DC63AB9FBAF74F /* FSXMLHttpRequest.m */,
+				127A218B3F687E64FB15379C891A822F /* http_stream.cpp */,
+				82E54FA471D55B0FD721D39219A49435 /* http_stream.h */,
+				3CC42EB41EFC5D4A86372B5E392A35E6 /* id3_parser.cpp */,
+				A42B6814E591DE6349CE060743DB261B /* id3_parser.h */,
+				3CDD387F2D4379BA45444DC0022E972D /* input_stream.cpp */,
+				F9E262F5F6BEEA025751BEE2BAE9A2F7 /* input_stream.h */,
+				3D9841DC0634A3E788476A0D64BCF6E8 /* stream_configuration.cpp */,
+				8D401702F7798D9848008CEA4A67417A /* stream_configuration.h */,
+				B874E268FFFD81A2D240D9C31CD4BCD8 /* Support Files */,
+			);
+			name = FreeStreamer;
+			path = FreeStreamer;
+			sourceTree = "<group>";
+		};
+		5FC310C47367EDD5B818DBAC1D2CCBB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91FCA191BB0A8F082D519FB1ED39C277 /* Reachability.framework */,
+				0780D5FCD287BFCD55459CB1E33F1958 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67C6D5F48F6543E2EA69990CD0493737 /* LookinServer */ = {
+			isa = PBXGroup;
+			children = (
+				C53795092D17F0A449E4F8D3DA5D1FB9 /* Frameworks */,
+				8BFCC89A0F7822B81C93A34A39FBCEA1 /* Support Files */,
+			);
+			name = LookinServer;
+			path = LookinServer;
+			sourceTree = "<group>";
+		};
+		804E0BCD9111946B1CC76BBDBA18E140 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4289D333DBBABA88E8BB168961788FDB /* FreeStreamer */,
+				67C6D5F48F6543E2EA69990CD0493737 /* LookinServer */,
+				E092F2B6892A4437086DAF2A096BE36E /* Reachability */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8BFCC89A0F7822B81C93A34A39FBCEA1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1BC4F23BBBDD0FCD086EC97E221109C /* LookinServer.debug.xcconfig */,
+				59009543F0913ED1760EFAB9B6AA6857 /* LookinServer.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LookinServer";
+			sourceTree = "<group>";
+		};
+		A8ADEC7EC12BE9CBAA1C30DAE9A698E3 /* Pods-AudioPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				99977FB35759C9D2147374443CCAFDA7 /* Pods-AudioPlayerTests.modulemap */,
+				9E53EA667123864F3004DC0FF0241C5B /* Pods-AudioPlayerTests-acknowledgements.markdown */,
+				E3E9CB4622B3FBD76379199255694B0B /* Pods-AudioPlayerTests-acknowledgements.plist */,
+				77595545C3530BFF9CD7F1DDF1256BCB /* Pods-AudioPlayerTests-dummy.m */,
+				C5BF658F0EDF01C63B93264C8195D466 /* Pods-AudioPlayerTests-Info.plist */,
+				BD0C49EEE1100C487552FA5FD0D94AD5 /* Pods-AudioPlayerTests-umbrella.h */,
+				1E7ED1B3F5422CBA250709AFFEC21E79 /* Pods-AudioPlayerTests.debug.xcconfig */,
+				C6872AA0EA817926540C5E57CD250DE2 /* Pods-AudioPlayerTests.release.xcconfig */,
+			);
+			name = "Pods-AudioPlayerTests";
+			path = "Target Support Files/Pods-AudioPlayerTests";
+			sourceTree = "<group>";
+		};
+		B874E268FFFD81A2D240D9C31CD4BCD8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				571CE05855A07A74E79C4F6ADDF9C20A /* FreeStreamer.modulemap */,
+				13063CBB0CD6DAD74D2A45B89C074260 /* FreeStreamer-dummy.m */,
+				480A56EB8D6D41645AFEC9F17141CF32 /* FreeStreamer-Info.plist */,
+				999D817F0C5929DB7D6B8AADBB9080AC /* FreeStreamer-prefix.pch */,
+				14C58F70348A41782A94F887C7A356B0 /* FreeStreamer-umbrella.h */,
+				086CB2F878A75EB42ECC193A4F526D41 /* FreeStreamer.debug.xcconfig */,
+				0C2448148CCCF4862CA4B39F77005677 /* FreeStreamer.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FreeStreamer";
+			sourceTree = "<group>";
+		};
+		BAC9CFBB1C7411F367E2C24BC94F25FA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1327BB8DCD3AE19641B4D93706230D1C /* Pods-AudioPlayer */,
+				EDA16EB813B7B84113C7CDD2C8380D91 /* Pods-AudioPlayer-AudioPlayerUITests */,
+				A8ADEC7EC12BE9CBAA1C30DAE9A698E3 /* Pods-AudioPlayerTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C53795092D17F0A449E4F8D3DA5D1FB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72069F9BBF6DE4A956E6BD7C9F37258F /* LookinServer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				5FC310C47367EDD5B818DBAC1D2CCBB3 /* Frameworks */,
+				804E0BCD9111946B1CC76BBDBA18E140 /* Pods */,
+				F5C2F09DFE137CC08DF8B2F63FABEC06 /* Products */,
+				BAC9CFBB1C7411F367E2C24BC94F25FA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E092F2B6892A4437086DAF2A096BE36E /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				2EA3DAB7E8C805C677E73CAA8E0B4B07 /* Reachability.h */,
+				1EFF2E754BCB3D8F63B698748A393DEE /* Reachability.m */,
+				F2DD506B3E92107346709EC7051E48B7 /* Support Files */,
+			);
+			name = Reachability;
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		EDA16EB813B7B84113C7CDD2C8380D91 /* Pods-AudioPlayer-AudioPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				64521244687BA7EEEA9C171F67187369 /* Pods-AudioPlayer-AudioPlayerUITests.modulemap */,
+				12B8E95AD0D743FB969DDA12C786A550 /* Pods-AudioPlayer-AudioPlayerUITests-acknowledgements.markdown */,
+				528946AC2076D84AC33D24473184F98E /* Pods-AudioPlayer-AudioPlayerUITests-acknowledgements.plist */,
+				F00C410D44B7408F1362A1141E387CE9 /* Pods-AudioPlayer-AudioPlayerUITests-dummy.m */,
+				1908281A3AA7C1161C46F4EC26A9956B /* Pods-AudioPlayer-AudioPlayerUITests-frameworks.sh */,
+				0E229DCD7FE371966A2CFF19CB3EDD89 /* Pods-AudioPlayer-AudioPlayerUITests-Info.plist */,
+				A165515202C149F434AF402A3C130E8A /* Pods-AudioPlayer-AudioPlayerUITests-umbrella.h */,
+				6309240E183499AFF3E153C73CD743FD /* Pods-AudioPlayer-AudioPlayerUITests.debug.xcconfig */,
+				8AE5CBF9CCE09D9190BA484FD0422FAC /* Pods-AudioPlayer-AudioPlayerUITests.release.xcconfig */,
+			);
+			name = "Pods-AudioPlayer-AudioPlayerUITests";
+			path = "Target Support Files/Pods-AudioPlayer-AudioPlayerUITests";
+			sourceTree = "<group>";
+		};
+		F2DD506B3E92107346709EC7051E48B7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA412FFC1703E17D295697609D1E2B6D /* Reachability.modulemap */,
+				529065240B63B46A5D3C3AC4760E06A8 /* Reachability-dummy.m */,
+				A6AF169E3025CB4DFDBDB1101C63FC76 /* Reachability-Info.plist */,
+				7F2FC3C5B342DB6083608064361B6D9F /* Reachability-prefix.pch */,
+				3E5587C022B3DBBF784106ADFBF372E0 /* Reachability-umbrella.h */,
+				217D5B541AE36D4AB5E20FD0F9939F4C /* Reachability.debug.xcconfig */,
+				1FFAB1D56C43673F671A1F9F68D5BE56 /* Reachability.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Reachability";
+			sourceTree = "<group>";
+		};
+		F5C2F09DFE137CC08DF8B2F63FABEC06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				359F20447DD6B2DABE3B77D75DA92F82 /* FreeStreamer.framework */,
+				1AC92983C0238D0816D6E58663DE9F1E /* Pods_AudioPlayer.framework */,
+				56600C003A1B2F5BB3339182FA78CA30 /* Pods_AudioPlayer_AudioPlayerUITests.framework */,
+				CD1A2787E67121D3CA627AD51B08BFB8 /* Pods_AudioPlayerTests.framework */,
+				400FF55D0451E7A8F33A3D0D3E11C1B9 /* Reachability.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4134BE85227E7F8FE42568DF991E1142 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BDA0AF54420A8711C3AF1E705807108 /* Pods-AudioPlayerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85392F55AD8CB1486D3BA6C4397A913D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				717F169056AA8DC57D3E8913EF71E9DE /* audio_queue.h in Headers */,
+				DC34A83DDAFFE9C3524261BA169B57CE /* audio_stream.h in Headers */,
+				1EFF69AD3F4B3FCE40EE39DD2982C7BA /* caching_stream.h in Headers */,
+				03630BB1C36457E7FCE4CAFB4165118B /* file_output.h in Headers */,
+				4449247D14426BF1FC9C42C495410799 /* file_stream.h in Headers */,
+				670B585D71494142EF8FDA9B90363861 /* FreeStreamer-umbrella.h in Headers */,
+				55D85AAFE02A90B17D6CF9F2C586E56E /* FSAudioController.h in Headers */,
+				EBE72BDADD2F46938D3A5D91079D5DEA /* FSAudioStream.h in Headers */,
+				FBA12BCBB06A13486A8E2A02858A92B5 /* FSCheckContentTypeRequest.h in Headers */,
+				71D2746DD86A1B08301006ED8D9A35E3 /* FSParsePlaylistRequest.h in Headers */,
+				491C93A373A4F5B244D7FFA2EF094E64 /* FSParseRssPodcastFeedRequest.h in Headers */,
+				288BC105165053D74066ECEB1A794866 /* FSPlaylistItem.h in Headers */,
+				ABBF9483CD41DB923EA693A7DC032075 /* FSXMLHttpRequest.h in Headers */,
+				E52FC34F29432BFE2089EBDE79C91711 /* http_stream.h in Headers */,
+				A5A41F089833F41CB32913504A8878E1 /* id3_parser.h in Headers */,
+				A44E841D60BD3F5E08AB594A4C131608 /* input_stream.h in Headers */,
+				7F9790C05724E6F757922CA82D51B650 /* stream_configuration.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7633EE58BA7ABC8E2743ECF3B6FC165 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				344FF47F336F81691D6E8C12334C5677 /* Pods-AudioPlayer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3C23E9F2130CEFF11F8B8B44001784 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52BCAC7ABBAF6C645BA4240BD5269451 /* Pods-AudioPlayer-AudioPlayerUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA53DAACC078667435FB939A4C01892D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E52571D7A8615154FDE794C289AA6A /* Reachability-umbrella.h in Headers */,
+				02B8C51002A2B221CCA800B4FD9749B5 /* Reachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4A1BA294847516277FFFF112CE2D4059 /* Pods-AudioPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39808C4F36E9683F561BDBE225663BE5 /* Build configuration list for PBXNativeTarget "Pods-AudioPlayerTests" */;
+			buildPhases = (
+				4134BE85227E7F8FE42568DF991E1142 /* Headers */,
+				F1BD47CD997A90EE11CE0642AC4BB0EE /* Sources */,
+				A5E3B14ECB6F3A60F7AA83F0E18F8431 /* Frameworks */,
+				4AF6ADA8C32043D099E422C41AC0CAAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				695C5A6104295A8106D8CCB59B7B881D /* PBXTargetDependency */,
+			);
+			name = "Pods-AudioPlayerTests";
+			productName = "Pods-AudioPlayerTests";
+			productReference = CD1A2787E67121D3CA627AD51B08BFB8 /* Pods_AudioPlayerTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		51172D7F210664B5BEDAACA466F2A452 /* Pods-AudioPlayer-AudioPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83CBAECD5C665E23FEA8BD590D3F97C /* Build configuration list for PBXNativeTarget "Pods-AudioPlayer-AudioPlayerUITests" */;
+			buildPhases = (
+				BF3C23E9F2130CEFF11F8B8B44001784 /* Headers */,
+				8AA42C43745BBC3ED8FB78BFA8DE5EDC /* Sources */,
+				0BE897FF2F4ED16C8DDA76E82D741AC1 /* Frameworks */,
+				4F677641F6C82595A72637C2F94A628A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99DFDD65364AF517497663FCB2D6A247 /* PBXTargetDependency */,
+				E1F7259F06168A865F03DE2880FD7BAA /* PBXTargetDependency */,
+				5F071674E8FC6227CE8D1C86E30CFF8E /* PBXTargetDependency */,
+			);
+			name = "Pods-AudioPlayer-AudioPlayerUITests";
+			productName = "Pods-AudioPlayer-AudioPlayerUITests";
+			productReference = 56600C003A1B2F5BB3339182FA78CA30 /* Pods_AudioPlayer_AudioPlayerUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		70DC5DA42DBE559A810B3417F948E574 /* Pods-AudioPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 107FE65A4EFF53EE14C4ABFDBC9492F8 /* Build configuration list for PBXNativeTarget "Pods-AudioPlayer" */;
+			buildPhases = (
+				A7633EE58BA7ABC8E2743ECF3B6FC165 /* Headers */,
+				0B3A8B93303D8265FA6260527CE58784 /* Sources */,
+				39888119535EDCC64FE45E1360F7CB95 /* Frameworks */,
+				8F7BE64B0357CD039956264821FAF231 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42E7CA27EE0FF359F9169CDF4A2D6DE9 /* PBXTargetDependency */,
+				CD38372710525F64BAB8640A0D56C0D5 /* PBXTargetDependency */,
+				2972B97CECC4BF385A736EDD6C09CDE3 /* PBXTargetDependency */,
+			);
+			name = "Pods-AudioPlayer";
+			productName = "Pods-AudioPlayer";
+			productReference = 1AC92983C0238D0816D6E58663DE9F1E /* Pods_AudioPlayer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C3AAC0817EA4DC8BD9C0046F50078BF9 /* FreeStreamer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A61C108DF06B61772EFF8130E9EB78 /* Build configuration list for PBXNativeTarget "FreeStreamer" */;
+			buildPhases = (
+				85392F55AD8CB1486D3BA6C4397A913D /* Headers */,
+				3C8437EAAB540EC4EBD59C50B8CD8079 /* Sources */,
+				339C4C2141A90766A490CD425C83B80E /* Frameworks */,
+				A942FC13AA1DD80B7BB8B11B163740C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D364D55D1E8AE6618482FB5C5433D5D /* PBXTargetDependency */,
+			);
+			name = FreeStreamer;
+			productName = FreeStreamer;
+			productReference = 359F20447DD6B2DABE3B77D75DA92F82 /* FreeStreamer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CAA047C0F5E4106F3904E8497FA17F97 /* Reachability */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B0E7C166F20C30576A6D15DEDE4CAF1 /* Build configuration list for PBXNativeTarget "Reachability" */;
+			buildPhases = (
+				FA53DAACC078667435FB939A4C01892D /* Headers */,
+				C140691C914B54BDFBD3DA71975BBA4A /* Sources */,
+				46B24D5A756AF17F03675DF77FA8260C /* Frameworks */,
+				BB8342FFD260C9F811599DD2D6F9E15F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Reachability;
+			productName = Reachability;
+			productReference = 400FF55D0451E7A8F33A3D0D3E11C1B9 /* Reachability.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F5C2F09DFE137CC08DF8B2F63FABEC06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3AAC0817EA4DC8BD9C0046F50078BF9 /* FreeStreamer */,
+				638FEAAFC575BB76BC6AC055CDDA3506 /* LookinServer */,
+				70DC5DA42DBE559A810B3417F948E574 /* Pods-AudioPlayer */,
+				51172D7F210664B5BEDAACA466F2A452 /* Pods-AudioPlayer-AudioPlayerUITests */,
+				4A1BA294847516277FFFF112CE2D4059 /* Pods-AudioPlayerTests */,
+				CAA047C0F5E4106F3904E8497FA17F97 /* Reachability */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4AF6ADA8C32043D099E422C41AC0CAAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F677641F6C82595A72637C2F94A628A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F7BE64B0357CD039956264821FAF231 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A942FC13AA1DD80B7BB8B11B163740C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB8342FFD260C9F811599DD2D6F9E15F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B3A8B93303D8265FA6260527CE58784 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32B681A2AA0BA93268FC55CB4915B7C3 /* Pods-AudioPlayer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C8437EAAB540EC4EBD59C50B8CD8079 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A3B9A657061022C62DCFBF9E79D0F2B /* audio_queue.cpp in Sources */,
+				5F357D1332E81A12780729C726ED8A93 /* audio_stream.cpp in Sources */,
+				DA610A98C19A70A501BA16C0C913CEBF /* caching_stream.cpp in Sources */,
+				9858AB4BDAD5C8B539C7E6DF1DE4F0F9 /* file_output.cpp in Sources */,
+				486B5F27A04C6FB63FB154D20DACE2BA /* file_stream.cpp in Sources */,
+				1A09136EE31484CED2B9C93FFF9ABBBF /* FreeStreamer-dummy.m in Sources */,
+				564FD0E8AAF2E0F3A721E2B3B63030EC /* FSAudioController.m in Sources */,
+				C3FA1860DC25A5617C5775B3C4EB8E9C /* FSAudioStream.mm in Sources */,
+				176424F3792D38B3A4CD5626DFA9DDA4 /* FSCheckContentTypeRequest.m in Sources */,
+				5C3E1966B9C02660449645C1452F4762 /* FSParsePlaylistRequest.m in Sources */,
+				A7639820B6D7961F51E6EB6557D36C55 /* FSParseRssPodcastFeedRequest.m in Sources */,
+				4BF5B27D774DA85D3F8677F29D890D98 /* FSPlaylistItem.m in Sources */,
+				C61C10BD0F1470B42C01DBA8C8A01699 /* FSXMLHttpRequest.m in Sources */,
+				40F871228B974D0CA5AF74547CB42671 /* http_stream.cpp in Sources */,
+				A6DB28566A4032559E72F9B23A8F86C0 /* id3_parser.cpp in Sources */,
+				24C0D31709AE53D880168DE1712709FD /* input_stream.cpp in Sources */,
+				E004012D190D7A95C656815740E2585F /* stream_configuration.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AA42C43745BBC3ED8FB78BFA8DE5EDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7199C5FEFFD68DD888AA588041309752 /* Pods-AudioPlayer-AudioPlayerUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C140691C914B54BDFBD3DA71975BBA4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73F0050FC36B85C7418C08DAF768B4B5 /* Reachability-dummy.m in Sources */,
+				C549EE72CA875EC70E88BA5565CD71E7 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1BD47CD997A90EE11CE0642AC4BB0EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31C116ACDB8ACE5FC9A7490B632C271 /* Pods-AudioPlayerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2972B97CECC4BF385A736EDD6C09CDE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Reachability;
+			target = CAA047C0F5E4106F3904E8497FA17F97 /* Reachability */;
+			targetProxy = 238C5D5B852CC5553FB5FEE43F501B55 /* PBXContainerItemProxy */;
+		};
+		42E7CA27EE0FF359F9169CDF4A2D6DE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FreeStreamer;
+			target = C3AAC0817EA4DC8BD9C0046F50078BF9 /* FreeStreamer */;
+			targetProxy = E521F1B36F71108AC2B931133415FBEF /* PBXContainerItemProxy */;
+		};
+		5F071674E8FC6227CE8D1C86E30CFF8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Reachability;
+			target = CAA047C0F5E4106F3904E8497FA17F97 /* Reachability */;
+			targetProxy = 115CF69EE9CBD326959138985B5B24F8 /* PBXContainerItemProxy */;
+		};
+		695C5A6104295A8106D8CCB59B7B881D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-AudioPlayer";
+			target = 70DC5DA42DBE559A810B3417F948E574 /* Pods-AudioPlayer */;
+			targetProxy = 9E8237A47BEA01F43974985C48A5EEEE /* PBXContainerItemProxy */;
+		};
+		6D364D55D1E8AE6618482FB5C5433D5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Reachability;
+			target = CAA047C0F5E4106F3904E8497FA17F97 /* Reachability */;
+			targetProxy = 436CE9E67C9DA16918F27B7B72765768 /* PBXContainerItemProxy */;
+		};
+		99DFDD65364AF517497663FCB2D6A247 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FreeStreamer;
+			target = C3AAC0817EA4DC8BD9C0046F50078BF9 /* FreeStreamer */;
+			targetProxy = BEFE95855CE1A7F054AF45C71B4A7F8B /* PBXContainerItemProxy */;
+		};
+		CD38372710525F64BAB8640A0D56C0D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LookinServer;
+			target = 638FEAAFC575BB76BC6AC055CDDA3506 /* LookinServer */;
+			targetProxy = 845C7F68952AE241C0C5273B8A8A1651 /* PBXContainerItemProxy */;
+		};
+		E1F7259F06168A865F03DE2880FD7BAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LookinServer;
+			target = 638FEAAFC575BB76BC6AC055CDDA3506 /* LookinServer */;
+			targetProxy = 640F2E3C6EFDECDA6A4B823776B30332 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AFD799EE24ECD6CAE193F604D611024 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E7ED1B3F5422CBA250709AFFEC21E79 /* Pods-AudioPlayerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AudioPlayerTests/Pods-AudioPlayerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AudioPlayerTests/Pods-AudioPlayerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		17810A7885DDF66DB64BE97775F02D9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6309240E183499AFF3E153C73CD743FD /* Pods-AudioPlayer-AudioPlayerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AudioPlayer-AudioPlayerUITests/Pods-AudioPlayer-AudioPlayerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AudioPlayer-AudioPlayerUITests/Pods-AudioPlayer-AudioPlayerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2572BBA9EBE3EEC384E21E083A936F36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FFAB1D56C43673F671A1F9F68D5BE56 /* Reachability.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Reachability/Reachability-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Reachability/Reachability.modulemap";
+				PRODUCT_MODULE_NAME = Reachability;
+				PRODUCT_NAME = Reachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		46DD6EA31E05B3C093F2489C7DA57533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AE5CBF9CCE09D9190BA484FD0422FAC /* Pods-AudioPlayer-AudioPlayerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AudioPlayer-AudioPlayerUITests/Pods-AudioPlayer-AudioPlayerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AudioPlayer-AudioPlayerUITests/Pods-AudioPlayer-AudioPlayerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		46E63558C65327153AFBEE5FAB34D97A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59009543F0913ED1760EFAB9B6AA6857 /* LookinServer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52A8D21F1F805A9FBC03E7DC5247FA27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6872AA0EA817926540C5E57CD250DE2 /* Pods-AudioPlayerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AudioPlayerTests/Pods-AudioPlayerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AudioPlayerTests/Pods-AudioPlayerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		556B9EE2C60C00CC252D3CE2CB4A36BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCF7309711E54D8462D99A6DA03DC934 /* Pods-AudioPlayer.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AudioPlayer/Pods-AudioPlayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AudioPlayer/Pods-AudioPlayer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		98716CCC13076E38267CEEDEF58E24A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 217D5B541AE36D4AB5E20FD0F9939F4C /* Reachability.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Reachability/Reachability-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Reachability/Reachability.modulemap";
+				PRODUCT_MODULE_NAME = Reachability;
+				PRODUCT_NAME = Reachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		98C39C68C8B05DC4CAF8E80292DCE26B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 148C5562F67D64BDDF86D3B92B737F97 /* Pods-AudioPlayer.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AudioPlayer/Pods-AudioPlayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AudioPlayer/Pods-AudioPlayer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B56E73C20B612C5DD704279CAE32513C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1BC4F23BBBDD0FCD086EC97E221109C /* LookinServer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E52D85C9192B343E10EE83476C4E0220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 086CB2F878A75EB42ECC193A4F526D41 /* FreeStreamer.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FreeStreamer/FreeStreamer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FreeStreamer/FreeStreamer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FreeStreamer/FreeStreamer.modulemap";
+				PRODUCT_MODULE_NAME = FreeStreamer;
+				PRODUCT_NAME = FreeStreamer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5384E46281443C86F546F88902B8466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C2448148CCCF4862CA4B39F77005677 /* FreeStreamer.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FreeStreamer/FreeStreamer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FreeStreamer/FreeStreamer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FreeStreamer/FreeStreamer.modulemap";
+				PRODUCT_MODULE_NAME = FreeStreamer;
+				PRODUCT_NAME = FreeStreamer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04A61C108DF06B61772EFF8130E9EB78 /* Build configuration list for PBXNativeTarget "FreeStreamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E52D85C9192B343E10EE83476C4E0220 /* Debug */,
+				E5384E46281443C86F546F88902B8466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		107FE65A4EFF53EE14C4ABFDBC9492F8 /* Build configuration list for PBXNativeTarget "Pods-AudioPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				556B9EE2C60C00CC252D3CE2CB4A36BA /* Debug */,
+				98C39C68C8B05DC4CAF8E80292DCE26B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39808C4F36E9683F561BDBE225663BE5 /* Build configuration list for PBXNativeTarget "Pods-AudioPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AFD799EE24ECD6CAE193F604D611024 /* Debug */,
+				52A8D21F1F805A9FBC03E7DC5247FA27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B0E7C166F20C30576A6D15DEDE4CAF1 /* Build configuration list for PBXNativeTarget "Reachability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98716CCC13076E38267CEEDEF58E24A1 /* Debug */,
+				2572BBA9EBE3EEC384E21E083A936F36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74EE83670ABC31CDD77B49DA732104E8 /* Build configuration list for PBXAggregateTarget "LookinServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56E73C20B612C5DD704279CAE32513C /* Debug */,
+				46E63558C65327153AFBEE5FAB34D97A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D83CBAECD5C665E23FEA8BD590D3F97C /* Build configuration list for PBXNativeTarget "Pods-AudioPlayer-AudioPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17810A7885DDF66DB64BE97775F02D9C /* Debug */,
+				46DD6EA31E05B3C093F2489C7DA57533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

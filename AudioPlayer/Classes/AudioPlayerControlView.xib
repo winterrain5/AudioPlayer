@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AudioPlayerControlView" customModule="AudioPlayer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="171"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZY-aJ-PEK">
+                    <rect key="frame" x="0.0" y="57" width="415" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE0-1r-X4s">
+                            <rect key="frame" x="0.0" y="0.0" width="83" height="80"/>
+                            <state key="normal" image="cm2_icn_loop"/>
+                            <state key="highlighted" image="cm2_icn_loop_prs"/>
+                            <connections>
+                                <action selector="loopAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="aLp-V1-RWy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HE7-Js-DbE">
+                            <rect key="frame" x="83" y="0.0" width="83" height="80"/>
+                            <state key="normal" image="cm2_fm_btn_previous"/>
+                            <state key="selected" image="cm2_fm_btn_previous_prs"/>
+                            <state key="highlighted" image="cm2_fm_btn_previous_prs"/>
+                            <connections>
+                                <action selector="preAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qbh-9O-d7C"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etW-JB-lMb">
+                            <rect key="frame" x="166" y="0.0" width="83" height="80"/>
+                            <state key="normal" image="cm2_fm_btn_play"/>
+                            <state key="selected" image="cm2_fm_btn_pause"/>
+                            <connections>
+                                <action selector="playAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Nha-Vb-ZUU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG7-GX-ifk">
+                            <rect key="frame" x="249" y="0.0" width="83" height="80"/>
+                            <state key="normal" image="cm2_fm_btn_next"/>
+                            <state key="selected" image="cm2_fm_btn_next_prs"/>
+                            <state key="highlighted" image="cm2_fm_btn_next_prs"/>
+                            <connections>
+                                <action selector="nextAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="RgE-3e-rSU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbq-Kz-tLW">
+                            <rect key="frame" x="332" y="0.0" width="83" height="80"/>
+                            <state key="normal" image="cm2_icn_list"/>
+                            <state key="highlighted" image="cm2_icn_list_prs"/>
+                            <connections>
+                                <action selector="listAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="b9f-AN-Kqt"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="DG7-GX-ifk" firstAttribute="width" secondItem="wE0-1r-X4s" secondAttribute="width" id="8HM-6u-3wq"/>
+                        <constraint firstItem="fbq-Kz-tLW" firstAttribute="width" secondItem="wE0-1r-X4s" secondAttribute="width" id="Q1T-B9-y7w"/>
+                        <constraint firstItem="etW-JB-lMb" firstAttribute="width" secondItem="wE0-1r-X4s" secondAttribute="width" id="a3v-Wf-fc6"/>
+                        <constraint firstItem="HE7-Js-DbE" firstAttribute="width" secondItem="wE0-1r-X4s" secondAttribute="width" id="hQn-yl-Ay2"/>
+                        <constraint firstAttribute="height" constant="80" id="pCV-cy-JTv"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQj-Hv-qlT">
+                    <rect key="frame" x="0.0" y="0.0" width="415" height="57"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGb-VH-60m">
+                            <rect key="frame" x="60" y="10" width="295" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="7xQ-9Z-7fL"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEv-X7-v6D">
+                            <rect key="frame" x="0.0" y="18.5" width="60" height="13.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdK-cV-ngU">
+                            <rect key="frame" x="355" y="18.5" width="60" height="13.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="AGb-VH-60m" secondAttribute="trailing" constant="60" id="4wg-Fv-zId"/>
+                        <constraint firstItem="QdK-cV-ngU" firstAttribute="leading" secondItem="AGb-VH-60m" secondAttribute="trailing" id="ITk-22-HkD"/>
+                        <constraint firstAttribute="trailing" secondItem="QdK-cV-ngU" secondAttribute="trailing" id="QWF-xp-853"/>
+                        <constraint firstItem="QdK-cV-ngU" firstAttribute="centerY" secondItem="AGb-VH-60m" secondAttribute="centerY" id="VgM-fr-M7R"/>
+                        <constraint firstItem="AGb-VH-60m" firstAttribute="leading" secondItem="MEv-X7-v6D" secondAttribute="trailing" id="aYU-Z1-kLR"/>
+                        <constraint firstItem="MEv-X7-v6D" firstAttribute="leading" secondItem="dQj-Hv-qlT" secondAttribute="leading" id="cHt-dO-ez9"/>
+                        <constraint firstItem="AGb-VH-60m" firstAttribute="top" secondItem="dQj-Hv-qlT" secondAttribute="top" constant="10" id="u2s-Lt-Htn"/>
+                        <constraint firstItem="MEv-X7-v6D" firstAttribute="centerY" secondItem="AGb-VH-60m" secondAttribute="centerY" id="xFU-f5-qYO"/>
+                        <constraint firstItem="AGb-VH-60m" firstAttribute="leading" secondItem="dQj-Hv-qlT" secondAttribute="leading" constant="60" id="zqq-Km-Lut"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GZY-aJ-PEK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0Le-O1-eux"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="GZY-aJ-PEK" secondAttribute="bottom" id="5FS-zR-yyL"/>
+                <constraint firstItem="GZY-aJ-PEK" firstAttribute="top" secondItem="dQj-Hv-qlT" secondAttribute="bottom" id="FR3-13-ejk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dQj-Hv-qlT" secondAttribute="trailing" id="K3m-oz-5Jp"/>
+                <constraint firstItem="dQj-Hv-qlT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UqE-JC-Nbl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GZY-aJ-PEK" secondAttribute="trailing" id="Xzo-j9-TEf"/>
+                <constraint firstItem="dQj-Hv-qlT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="suU-GC-t6k"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="currentLabel" destination="MEv-X7-v6D" id="MSl-Qh-gkw"/>
+                <outlet property="listButton" destination="fbq-Kz-tLW" id="iaj-aH-gx9"/>
+                <outlet property="loopButton" destination="wE0-1r-X4s" id="V8T-Jz-a1l"/>
+                <outlet property="nextButton" destination="DG7-GX-ifk" id="cZ6-NZ-cOL"/>
+                <outlet property="playButton" destination="etW-JB-lMb" id="P08-Zh-5TP"/>
+                <outlet property="preButton" destination="HE7-Js-DbE" id="yQC-c1-eDg"/>
+                <outlet property="sliderContainer" destination="AGb-VH-60m" id="R7F-7N-dy7"/>
+                <outlet property="totalLabel" destination="QdK-cV-ngU" id="KcW-O6-4Fe"/>
+            </connections>
+            <point key="canvasLocation" x="351" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cm2_fm_btn_next" width="49" height="49"/>
+        <image name="cm2_fm_btn_next_prs" width="49" height="49"/>
+        <image name="cm2_fm_btn_pause" width="68" height="68"/>
+        <image name="cm2_fm_btn_play" width="68" height="68"/>
+        <image name="cm2_fm_btn_previous" width="49" height="49"/>
+        <image name="cm2_fm_btn_previous_prs" width="49" height="49"/>
+        <image name="cm2_icn_list" width="44" height="44"/>
+        <image name="cm2_icn_list_prs" width="44" height="44"/>
+        <image name="cm2_icn_loop" width="44" height="44"/>
+        <image name="cm2_icn_loop_prs" width="44" height="44"/>
+    </resources>
+</document>
