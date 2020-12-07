@@ -7,6 +7,11 @@ target 'AudioPlayer' do
  pod 'FreeStreamer'                    # 音频播放
   # Pods for AudioPlayer
   pod 'LookinServer', :configurations => ['Debug']
+  pod 'ZFPlayer', '~> 4.0'
+  pod 'ZFPlayer/ControlView', '~> 4.0'
+  pod 'ZFPlayer/AVPlayer', '~> 4.0'
+  pod 'Then'
+  pod 'SnapKit'
   target 'AudioPlayerTests' do
     inherit! :search_paths
     # Pods for testing

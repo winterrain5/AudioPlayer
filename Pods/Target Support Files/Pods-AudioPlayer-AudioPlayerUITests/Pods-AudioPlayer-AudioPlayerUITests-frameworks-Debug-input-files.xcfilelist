@@ -2,3 +2,5 @@ ${PODS_ROOT}/Target Support Files/Pods-AudioPlayer-AudioPlayerUITests/Pods-Audio
 ${BUILT_PRODUCTS_DIR}/FreeStreamer/FreeStreamer.framework
 ${PODS_ROOT}/LookinServer/LookinServer.framework
 ${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/Then/Then.framework

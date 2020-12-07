@@ -3,22 +3,42 @@ PODS:
     - Reachability (~> 3.0)
   - LookinServer (1.0.0)
   - Reachability (3.2)
+  - SnapKit (5.0.1)
+  - Then (2.7.0)
+  - ZFPlayer (4.0.1):
+    - ZFPlayer/Core (= 4.0.1)
+  - ZFPlayer/AVPlayer (4.0.1):
+    - ZFPlayer/Core
+  - ZFPlayer/ControlView (4.0.1):
+    - ZFPlayer/Core
+  - ZFPlayer/Core (4.0.1)
 
 DEPENDENCIES:
   - FreeStreamer
   - LookinServer
+  - SnapKit
+  - Then
+  - ZFPlayer (~> 4.0)
+  - ZFPlayer/AVPlayer (~> 4.0)
+  - ZFPlayer/ControlView (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - FreeStreamer
     - LookinServer
     - Reachability
+    - SnapKit
+    - Then
+    - ZFPlayer
 
 SPEC CHECKSUMS:
   FreeStreamer: 7e9c976045701ac2f7e9c14c17245203c37bf2ea
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: 2b409c198c8af39e1c255419ef8bf98986934c00
+PODFILE CHECKSUM: 38447d657a5a2f5ac888afd25a232f8490a2b037
 
 COCOAPODS: 1.10.0.rc.1

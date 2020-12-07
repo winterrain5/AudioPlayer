@@ -13,9 +13,11 @@ let music2 = "http://music.163.com/song/media/outer/url?id=476592630.mp3"
 //大鱼 - 周深
 let music3 = "http://music.163.com/song/media/outer/url?id=413812448.mp3"
 
+let video = "https://file.victor.vip/upload/2020/10/13/13/24/6E3094C-0E4C-4D4E-A106-592EB81E23F9.mp4"
+
 class ViewController: UITableViewController {
  
-    var datas:[String] = ["少司命 - 客官请进","Mike zhou - The Dawn","大鱼 - 周深"]
+    var datas:[String] = ["少司命 - 客官请进","Mike zhou - The Dawn","大鱼 - 周深","播放视频"]
     var music:[String] = [music1,music2,music3]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class ViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return datas.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,10 +39,18 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = AudioPlayerController.shared
-        vc.audioList = music
-        self.navigationController?.pushViewController(vc, animated: true)
-        vc.playMusic(with: music[indexPath.row])
+        
+        if indexPath.row == 3 {
+            let vc = VideoPlayController()
+            vc.videoUrl = video
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else {
+            let vc = AudioPlayerController.shared
+            vc.audioList = music
+            self.navigationController?.pushViewController(vc, animated: true)
+            vc.playMusic(with: music[indexPath.row])
+        }
+        
         
     }
 
