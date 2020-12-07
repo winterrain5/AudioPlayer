@@ -453,13 +453,18 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
                 showControlView(animated: true)
             }
         }
+        if isFullScreen && rateCoverView.alpha == 1{
+            rateCoverView.alpha = 0
+        }
     }
     
     // 双击
     func gestureDoubleTapped(_ gestureControl: ZFPlayerGestureControl) {
         playOrPause()
-        hideControlView(animated: false)
-        showControlView(animated: true)
+        if !controlViewAppeared {
+            hideControlView(animated: false)
+            showControlView(animated: true)
+        }
     }
     
     // 准备播放
@@ -482,6 +487,7 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
         case .playStatePlayStopped:
             playBtnSelectedState(false)
             activity.stopAnimating()
+            showControlView(animated: false)
         case .playStatePlayFailed:
             activity.stopAnimating()
         default:
@@ -511,12 +517,17 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
 
         if !slider.isdragging {
             let currenttimeString = Float(currentTime).converTimeSecond
-            currentTimeLabel.text = currenttimeString
-            
+        
             let totaltimeString = Float(totalTime).converTimeSecond
             totalTimeLabel.text = totaltimeString
             
             slider.value = videoPlayer.progress
+            
+            if isFullScreen {
+                currentTimeLabel.text = "\(currenttimeString)/\(totaltimeString)"
+            }else {
+                currentTimeLabel.text = currenttimeString
+            }
         }
     }
     

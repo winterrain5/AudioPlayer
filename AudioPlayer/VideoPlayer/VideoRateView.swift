@@ -79,9 +79,5 @@ class VideoRateView: UIView {
             }
         }
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.alpha = 0
-    }
 
 }
