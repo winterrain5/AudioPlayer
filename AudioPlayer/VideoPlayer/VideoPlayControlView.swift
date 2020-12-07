@@ -86,7 +86,7 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
     }
     /// 底图图
     lazy var backgroundImageView = UIImageView().then { (imageView) in
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
     }
     lazy var blurView = UIVisualEffectView().then { (view) in
@@ -110,7 +110,6 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
     /// 是否显示controlView
     lazy var isShow:Bool = false
     lazy var controlViewAppeared:Bool = false
-    lazy var isFullScreen = false
     
     var afterBlock:DispatchWorkItem?
     
@@ -162,7 +161,8 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if isFullScreen {
+        guard let player = self.player else { return }
+        if player.isFullScreen {
             landscapLayout()
         }else {
             portraitLayout()
@@ -453,7 +453,7 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
                 showControlView(animated: true)
             }
         }
-        if isFullScreen && rateCoverView.alpha == 1{
+        if player.isFullScreen && rateCoverView.alpha == 1{
             rateCoverView.alpha = 0
         }
     }
@@ -523,7 +523,7 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
             
             slider.value = videoPlayer.progress
             
-            if isFullScreen {
+            if videoPlayer.isFullScreen {
                 currentTimeLabel.text = "\(currenttimeString)/\(totaltimeString)"
             }else {
                 currentTimeLabel.text = currenttimeString
@@ -549,7 +549,6 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
         }else {
             hideControlView(animated: false)
         }
-        isFullScreen = observer.isFullScreen
         layoutIfNeeded()
         setNeedsLayout()
     }

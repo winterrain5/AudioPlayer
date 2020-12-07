@@ -30,6 +30,7 @@ class VideoPlayController: UIViewController {
         player?.controlView = controlView
         player?.shouldAutoPlay = false
         
+        
         self.player?.orientationWillChange = { player,isFull in
             UIApplication.changeOrientationTo(landscapeRight: isFull)
         }
@@ -48,6 +49,10 @@ class VideoPlayController: UIViewController {
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
+    }
+    
+    deinit {
+        player?.stop()
     }
 
 }
