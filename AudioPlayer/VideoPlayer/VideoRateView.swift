@@ -12,11 +12,12 @@ class VideoRateView: UIView {
     var backgroundImageView = UIImageView()
     var statckView = UIStackView()
     var selectedButton:UIButton!
-    
+    var rateSelectComplete:((Float)->())?
     var rate = ["2.0","1.5","1.0","0.5"]
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .clear
+        backgroundImageView.isUserInteractionEnabled = true
         addSubview(backgroundImageView)
         backgroundImageView.image = UIImage(named: "rate_cover_background")
         
@@ -27,13 +28,15 @@ class VideoRateView: UIView {
         for i in 0...(rate.count - 1){
             let button = UIButton()
             button.tag = i
-            button.setTitle(rate[i], for: .normal)
+            button.setTitle(rate[i] + "x", for: .normal)
             button.titleLabel?.textColor = UIColor.white
             button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
             button.addTarget(self, action: #selector(rateAction(_:)), for: .touchUpInside)
+            button.setBackgroundImage(UIImage(named: "rate_selected_background"), for: .selected)
+            button.setBackgroundImage(nil, for: .normal)
             statckView.addArrangedSubview(button)
             if i == 2 {
-                button.setImage(UIImage(named: "rate_selected_background"), for: .selected)
+                
                 selectedButton = button
                 selectedButton.isSelected.toggle()
             }
@@ -43,6 +46,12 @@ class VideoRateView: UIView {
     
     @objc func rateAction(_ sender:UIButton) {
         sender.isSelected.toggle()
+        selectedButton.isSelected.toggle()
+        selectedButton = sender
+        rateSelectComplete?(Float(rate[sender.tag]) ?? 1.0)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.alpha = 0
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -69,6 +78,10 @@ class VideoRateView: UIView {
                 make.top.equalToSuperview().offset(i * 36)
             }
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.alpha = 0
     }
 
 }

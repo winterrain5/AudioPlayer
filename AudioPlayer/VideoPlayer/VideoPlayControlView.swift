@@ -60,9 +60,7 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
         slider.bufferTrackTintColor = .clear
         slider.minimumTrackImage = UIImage(named: "slider_progress")
         slider.sliderBtn.setBackgroundImage(UIImage(named: "slider_dot"), for: .normal)
-        slider.sliderHeight = 2
-        slider.sliderRadius = 1
-        slider.thumbSize = CGSize(width: 5, height: 10)
+        
     }
     /// 视频总时间
     lazy var totalTimeLabel = UILabel().then { (label) in
@@ -112,6 +110,7 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
     /// 是否显示controlView
     lazy var isShow:Bool = false
     lazy var controlViewAppeared:Bool = false
+    lazy var isFullScreen = false
     
     var afterBlock:DispatchWorkItem?
     
@@ -137,6 +136,7 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
         bottomToolView.addSubview(rateButton)
         bottomToolView.addSubview(fullScreenButton)
         
+        rateCoverView.alpha = 0
         addSubview(rateCoverView)
         
         addActions()
@@ -150,13 +150,31 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
     func addActions() {
         playOrPauseButton.addTarget(self, action: #selector(playPauseButtonClickAction(_:)), for: .touchUpInside)
         fullScreenButton.addTarget(self, action: #selector(fullScreenButtonClickAction(_:)), for: .touchUpInside)
+        rateButton.addTarget(self, action: #selector(rateButtonClickAction(_:)), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(fullScreenButtonClickAction(_:)), for: .touchUpInside)
+        
+        rateCoverView.rateSelectComplete = { [weak self] rate in
+            guard let `self` = self else { return }
+            self.player?.currentPlayerManager.rate = rate
+            self.rateButton.setTitle("\(rate)x", for: .normal)
+        }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        portraitLayout()
+        if isFullScreen {
+            landscapLayout()
+        }else {
+            portraitLayout()
+        }
+        
     }
     
+    @objc func rateButtonClickAction(_ sender:UIButton) {
+        UIView.animate(withDuration: 0.2) {
+            self.rateCoverView.alpha = self.rateCoverView.alpha == 0 ? 1 : 0
+        }
+    }
     
     @objc func playPauseButtonClickAction(_ sender:UIButton) {
         playOrPause()
@@ -164,6 +182,8 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
     
     @objc func fullScreenButtonClickAction(_ sender:UIButton) {
         player?.enterFullScreen(!(self.player?.isFullScreen ?? false), animated: true)
+        layoutIfNeeded()
+        setNeedsLayout()
     }
     
     /// 根据当前状态取反
@@ -178,41 +198,49 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
     
     func portraitLayout() {
         
-        backgroundImageView.snp.makeConstraints { (make) in
+        topToolView.isHidden = true
+        totalTimeLabel.isHidden = false
+        rateButton.isHidden = true
+        fullScreenButton.isSelected = false
+        
+        backgroundImageView.snp.remakeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-        blurView.snp.makeConstraints { (make) in
+        blurView.snp.remakeConstraints { (make) in
             make.edges.equalToSuperview()
         }
 
-        bottomToolView.snp.makeConstraints { (make) in
+        bottomToolView.snp.remakeConstraints { (make) in
             make.left.bottom.right.equalToSuperview()
             make.height.equalTo(54)
         }
         bottomGradientLayer.frame = bottomToolView.bounds
-        playOrPauseButton.snp.makeConstraints { (make) in
+        playOrPauseButton.snp.remakeConstraints { (make) in
             make.left.equalToSuperview().offset(8)
             make.bottom.equalToSuperview().offset(-11)
             make.width.height.equalTo(18)
         }
-        currentTimeLabel.snp.makeConstraints { (make) in
+        currentTimeLabel.snp.remakeConstraints { (make) in
             make.left.equalTo(playOrPauseButton.snp.right).offset(9)
             make.centerY.equalTo(playOrPauseButton)
         }
         
-        fullScreenButton.snp.makeConstraints { (make) in
+        fullScreenButton.snp.remakeConstraints { (make) in
             make.right.equalToSuperview().offset(-16)
             make.centerY.equalTo(playOrPauseButton)
             make.width.equalTo(19)
             make.height.equalTo(17)
         }
-        
-        totalTimeLabel.snp.makeConstraints { (make) in
+
+        totalTimeLabel.snp.remakeConstraints { (make) in
             make.right.equalTo(fullScreenButton.snp.left).offset(-11)
             make.centerY.equalTo(playOrPauseButton)
         }
         
-        slider.snp.makeConstraints { (make) in
+        slider.sliderHeight = 2
+        slider.sliderRadius = 1
+        slider.thumbSize = CGSize(width: 5, height: 10)
+        slider.snp.remakeConstraints { (make) in
             make.left.equalTo(currentTimeLabel.snp.right).offset(8)
             make.centerY.equalTo(playOrPauseButton)
             make.height.equalTo(12)
@@ -223,6 +251,108 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
     
     func landscapLayout() {
         
+        totalTimeLabel.isHidden = true
+        topToolView.isHidden = false
+        rateButton.isHidden = false
+        fullScreenButton.isSelected = true
+        
+        backgroundImageView.snp.remakeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+        blurView.snp.remakeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+
+        bottomToolView.snp.remakeConstraints { (make) in
+            make.left.bottom.right.equalToSuperview()
+            make.height.equalTo(68 + kBottomsafeAreaMargin)
+        }
+        bottomGradientLayer.frame = bottomToolView.bounds
+        
+        topToolView.snp.remakeConstraints { (make) in
+            make.left.top.right.equalToSuperview()
+            make.height.equalTo(68)
+        }
+        topGradientLayer.frame = topToolView.bounds
+        
+        rateCoverView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+        
+        if iPhoneX() {
+            
+            backButton.snp.remakeConstraints { (make) in
+                make.left.equalToSuperview().offset(kTopsafeAreaMargin)
+                make.centerY.equalToSuperview()
+                make.width.height.equalTo(30)
+            }
+            
+            playOrPauseButton.snp.remakeConstraints { (make) in
+                make.left.equalToSuperview().offset(kTopsafeAreaMargin)
+                make.bottom.equalToSuperview().offset(-24)
+                make.width.height.equalTo(21)
+            }
+          
+            
+            fullScreenButton.snp.remakeConstraints { (make) in
+                make.right.equalToSuperview().offset(-kBottomsafeAreaMargin)
+                make.centerY.equalTo(playOrPauseButton)
+                make.width.equalTo(26)
+                make.height.equalTo(21)
+            }
+            
+            
+        }else {
+            
+            backButton.snp.remakeConstraints { (make) in
+                make.left.equalToSuperview().offset(16)
+                make.centerY.equalToSuperview()
+                make.width.height.equalTo(30)
+            }
+            
+            playOrPauseButton.snp.remakeConstraints { (make) in
+                make.left.equalToSuperview().offset(15)
+                make.bottom.equalToSuperview().offset(-24)
+                make.width.height.equalTo(21)
+            }
+          
+            
+            fullScreenButton.snp.remakeConstraints { (make) in
+                make.right.equalToSuperview().offset(-16)
+                make.centerY.equalTo(playOrPauseButton)
+                make.width.equalTo(26)
+                make.height.equalTo(21)
+            }
+            
+        }
+        
+        rateButton.snp.remakeConstraints { (make) in
+            make.right.equalTo(fullScreenButton.snp.left).offset(-16)
+            make.centerY.equalTo(playOrPauseButton)
+            make.width.equalTo(35)
+            make.height.equalTo(19)
+        }
+        
+        
+        slider.sliderHeight = 4
+        slider.sliderRadius = 2
+        slider.thumbSize = CGSize(width: 8, height: 16)
+        slider.snp.remakeConstraints { (make) in
+            make.left.equalTo(playOrPauseButton.snp.right).offset(8)
+            make.centerY.equalTo(playOrPauseButton)
+            make.height.equalTo(18)
+            make.right.equalTo(rateButton.snp.left).offset(-20)
+        }
+        
+        currentTimeLabel.snp.remakeConstraints { (make) in
+            make.left.equalTo(slider)
+            make.top.equalTo(slider.snp.bottom).offset(6)
+        }
+        
+        titleLabel.snp.remakeConstraints { (make) in
+            make.centerY.equalTo(backButton)
+            make.centerX.equalToSuperview()
+        }
     }
     
     func resetControlView() {
@@ -328,6 +458,8 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
     // 双击
     func gestureDoubleTapped(_ gestureControl: ZFPlayerGestureControl) {
         playOrPause()
+        hideControlView(animated: false)
+        showControlView(animated: true)
     }
     
     // 准备播放
@@ -406,6 +538,9 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
         }else {
             hideControlView(animated: false)
         }
+        isFullScreen = observer.isFullScreen
+        layoutIfNeeded()
+        setNeedsLayout()
     }
     
     // 视频view 已经旋转

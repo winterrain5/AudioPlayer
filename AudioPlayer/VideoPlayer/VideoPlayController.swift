@@ -38,7 +38,7 @@ class VideoPlayController: UIViewController {
             manager.assetURL = url
         }
         
-        controlView.show(title: "", placeHolder: UIImage(named: "video_place_holder")!, coverUrlStr: coverUrl, fullScreenModel: .landscape)
+        controlView.show(title: "播放视频", placeHolder: UIImage(named: "video_place_holder")!, coverUrlStr: coverUrl, fullScreenModel: .landscape)
         
     }
     
