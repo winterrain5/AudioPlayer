@@ -10,7 +10,6 @@
 		395392B4257DC54800539513 /* VideoPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395392B3257DC54800539513 /* VideoPlayController.swift */; };
 		395392BC257DCECD00539513 /* VideoPlayControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395392BB257DCECD00539513 /* VideoPlayControlView.swift */; };
 		395392C1257DD29C00539513 /* VideoRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395392C0257DD29C00539513 /* VideoRateView.swift */; };
-		396C54032570C72300D1B5B4 /* AudioPlayerVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C54022570C72300D1B5B4 /* AudioPlayerVolumeView.swift */; };
 		39C35769256DF96E00EA22F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C35768256DF96E00EA22F9 /* AppDelegate.swift */; };
 		39C3576D256DF96E00EA22F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C3576C256DF96E00EA22F9 /* ViewController.swift */; };
 		39C35770256DF96E00EA22F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C3576E256DF96E00EA22F9 /* Main.storyboard */; };
@@ -25,6 +24,7 @@
 		39C357C6256E284100EA22F9 /* AudioPlayerControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39C357C5256E284100EA22F9 /* AudioPlayerControlView.xib */; };
 		39C3580D256E705F00EA22F9 /* AudioPlayerSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C3580C256E705F00EA22F9 /* AudioPlayerSliderView.swift */; };
 		39C35813256E748A00EA22F9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C35812256E748A00EA22F9 /* UIViewExtension.swift */; };
+		39DCB8FB257F1A80008EE86E /* AudioRateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DCB8FA257F1A80008EE86E /* AudioRateListView.swift */; };
 		9332517B8FA126AC824DE4AB /* Pods_AudioPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBA8007CCDDB114BF5A6180 /* Pods_AudioPlayer.framework */; };
 		93B75B7DAED464BEBD24A0FA /* Pods_AudioPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F70C8988C8D65B342975 /* Pods_AudioPlayerTests.framework */; };
 		F61D02FC940E9AABDFF41433 /* Pods_AudioPlayer_AudioPlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFCCDEC224225A882B3A239 /* Pods_AudioPlayer_AudioPlayerUITests.framework */; };
@@ -53,7 +53,6 @@
 		395392B3257DC54800539513 /* VideoPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayController.swift; sourceTree = "<group>"; };
 		395392BB257DCECD00539513 /* VideoPlayControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayControlView.swift; sourceTree = "<group>"; };
 		395392C0257DD29C00539513 /* VideoRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRateView.swift; sourceTree = "<group>"; };
-		396C54022570C72300D1B5B4 /* AudioPlayerVolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerVolumeView.swift; sourceTree = "<group>"; };
 		39C35765256DF96E00EA22F9 /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C35768256DF96E00EA22F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39C3576C256DF96E00EA22F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		39C357C5256E284100EA22F9 /* AudioPlayerControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioPlayerControlView.xib; sourceTree = "<group>"; };
 		39C3580C256E705F00EA22F9 /* AudioPlayerSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerSliderView.swift; sourceTree = "<group>"; };
 		39C35812256E748A00EA22F9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		39DCB8FA257F1A80008EE86E /* AudioRateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRateListView.swift; sourceTree = "<group>"; };
 		676016528388A6FED43E623C /* Pods-AudioPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioPlayer.debug.xcconfig"; path = "Target Support Files/Pods-AudioPlayer/Pods-AudioPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		884D0AFE13E64341D754F994 /* Pods-AudioPlayer-AudioPlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioPlayer-AudioPlayerUITests.release.xcconfig"; path = "Target Support Files/Pods-AudioPlayer-AudioPlayerUITests/Pods-AudioPlayer-AudioPlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8A7D00D2311AF7E0D035524E /* Pods-AudioPlayer-AudioPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioPlayer-AudioPlayerUITests.debug.xcconfig"; path = "Target Support Files/Pods-AudioPlayer-AudioPlayerUITests/Pods-AudioPlayer-AudioPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 				39C357C0256E283200EA22F9 /* AudioPlayerControlView.swift */,
 				39C357C5256E284100EA22F9 /* AudioPlayerControlView.xib */,
 				39C3580C256E705F00EA22F9 /* AudioPlayerSliderView.swift */,
-				396C54022570C72300D1B5B4 /* AudioPlayerVolumeView.swift */,
+				39DCB8FA257F1A80008EE86E /* AudioRateListView.swift */,
 			);
 			path = AudioPlayer;
 			sourceTree = "<group>";
@@ -494,10 +494,10 @@
 				39C3576D256DF96E00EA22F9 /* ViewController.swift in Sources */,
 				39C3580D256E705F00EA22F9 /* AudioPlayerSliderView.swift in Sources */,
 				395392C1257DD29C00539513 /* VideoRateView.swift in Sources */,
+				39DCB8FB257F1A80008EE86E /* AudioRateListView.swift in Sources */,
 				395392BC257DCECD00539513 /* VideoPlayControlView.swift in Sources */,
 				39C35769256DF96E00EA22F9 /* AppDelegate.swift in Sources */,
 				395392B4257DC54800539513 /* VideoPlayController.swift in Sources */,
-				396C54032570C72300D1B5B4 /* AudioPlayerVolumeView.swift in Sources */,
 				39C35813256E748A00EA22F9 /* UIViewExtension.swift in Sources */,
 				39C3579F256DFE0500EA22F9 /* AudioPlayer.swift in Sources */,
 				39C357BC256E282100EA22F9 /* AudioPlayerController.swift in Sources */,

@@ -97,7 +97,7 @@ class AudioPlayer: NSObject {
                 self.playState = .ended
             case .fsAudioStreamRetryingSucceeded:
                 print("检索成功")
-                self.playState = .loading
+                self.playState = .playing
             case .fsAudioStreamUnknownState:
                 print("未知状态")
                 self.playState = .error

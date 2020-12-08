@@ -99,9 +99,21 @@ class AudioPlayerSliderView: UIView {
     /// 滑竿高度 默认 2
     var sliderHeight:CGFloat = 2 {
         didSet {
-            trackProgressView.height = oldValue
-            bufferProgressView.height = oldValue
-            sliderProgressView.height = oldValue
+            trackProgressView.height = sliderHeight
+            bufferProgressView.height = sliderHeight
+            sliderProgressView.height = sliderHeight
+        }
+    }
+    var sliderCorner:CGFloat = 1 {
+        didSet {
+            trackProgressView.layer.cornerRadius = sliderCorner
+            bufferProgressView.layer.cornerRadius = sliderCorner
+            sliderProgressView.layer.cornerRadius = sliderCorner
+        }
+    }
+    var thumbImageSize:CGSize = CGSize(width: 5, height: 5) {
+        didSet {
+            sliderButton.size = thumbImageSize
         }
     }
     

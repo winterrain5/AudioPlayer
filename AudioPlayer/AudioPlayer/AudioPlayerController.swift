@@ -32,7 +32,13 @@ class AudioPlayerController: UIViewController {
     
     static let shared = AudioPlayerController()
     
-    var controlView:AudioPlayerControlView = AudioPlayerControlView.loadViewFromNib()
+    lazy var controlView:AudioPlayerControlView = AudioPlayerControlView.loadViewFromNib()
+    lazy var containerView = UIImageView().then { (imageView) in
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.isUserInteractionEnabled = true
+        imageView.image = UIImage(named: "video_place_holder")
+    }
     
     let player = AudioPlayer.shared
     var audioList:[String] = []
@@ -44,9 +50,12 @@ class AudioPlayerController: UIViewController {
         
         self.view.backgroundColor = .white
         
-        self.view.addSubview(controlView)
+        self.view.addSubview(containerView)
+        containerView.frame = CGRect(x: 0, y: kNavBarHeight, width: kScreenWidth, height: kScreenWidth * 0.528)
+        
+        containerView.addSubview(controlView)
         controlView.delegate = self
-        controlView.frame = CGRect(x: 0, y: self.view.height - 160, width: self.view.width, height: 160)
+        controlView.frame = containerView.bounds
         
         player.delegate = self
         addNotifications()
@@ -261,7 +270,6 @@ class AudioPlayerController: UIViewController {
             self.currentIndex = 0
         }
         self.ifNowPlay = true
-        if self.isPlaying { return }
         self.playMusic(with: self.currentIndex)
         
     }
@@ -274,7 +282,6 @@ class AudioPlayerController: UIViewController {
             self.currentIndex = 0
         }
         self.ifNowPlay = true
-        if self.isPlaying { return }
         self.playMusic(with: self.currentIndex)
     }
     
@@ -383,9 +390,7 @@ class AudioPlayerController: UIViewController {
     /// - Parameter msTime: 毫秒
     private func formatTime(msTime:Float) -> String{
         let second = msTime / 1000
-        return String(format: "%02.f:%02.f",
-                      CGFloat(second).truncatingRemainder(dividingBy: 3600)/60,
-                      CGFloat(second).truncatingRemainder(dividingBy: 60))
+        return second.converTimeSecond
     }
     
     
@@ -408,8 +413,8 @@ extension AudioPlayerController:AudioPlayerDelegate {
             self.controlView.setupPauseBtn()
             self.isPlaying = false
         case .buffering:
-            self.controlView.hideLoading()
-            self.controlView.setupPlayBtn()
+            self.controlView.showLoading()
+            self.controlView.setupPauseBtn()
             self.isPlaying = true
         case .playing:
             self.controlView.hideLoading()
@@ -479,8 +484,11 @@ extension AudioPlayerController:AudioPlayerDelegate {
     
 }
 extension AudioPlayerController:AudioPlayerControlViewDelegate {
-    func controlView(controlView: AudioPlayerControlView, didClickLoop: UIButton) {
-        
+  
+    func controlView(controlView: AudioPlayerControlView, didClickRate rate: Float) {
+        if self.isPlaying {
+            self.player.setPlayerRate(rate)
+        }
     }
     
     func controlView(controlView: AudioPlayerControlView, didClickPrev: UIButton) {
@@ -513,9 +521,7 @@ extension AudioPlayerController:AudioPlayerControlViewDelegate {
         self.playNextMusic()
     }
     
-    func controlView(controlView: AudioPlayerControlView, didClickList: UIButton) {
-        
-    }
+    
     
     func controlView(controlView: AudioPlayerControlView, didSliderTouchBegan value: Float) {
         print("didSliderTouchBegan\(value)")

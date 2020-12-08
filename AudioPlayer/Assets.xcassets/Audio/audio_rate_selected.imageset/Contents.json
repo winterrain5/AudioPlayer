@@ -1,15 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "video_place_holder.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "audio_rate_selected@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "audio_rate_selected@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

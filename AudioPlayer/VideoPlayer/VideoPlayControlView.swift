@@ -177,6 +177,10 @@ class VideoPlayControlView: UIView,ZFPlayerMediaControl {
     }
     
     @objc func playPauseButtonClickAction(_ sender:UIButton) {
+        guard let player = self.player else { return }
+        if player.progress >= 1 {
+            player.currentPlayerManager.replay()
+        }
         playOrPause()
     }
     
